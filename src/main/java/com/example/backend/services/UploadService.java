@@ -43,7 +43,7 @@ public class UploadService {
 
     public Optional<ResponseMessage> updateFile(int id, MultipartFile file) {
         String fileName = StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
-        String uploadDir = "D:\\TuongDi\\LVTN\\Code\\backend\\uploads";
+        String uploadDir = "D:\\HaoLN\\LVTN\\Code\\backend\\uploads"; // modify url uploads
         FileUploadUtil.saveFile(uploadDir, fileName, file);
 
         String fileUrl = "http://localhost:8080/file/" + fileName;
